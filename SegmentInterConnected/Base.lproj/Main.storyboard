@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X5x-YC-WKE">
+                                <rect key="frame" x="20" y="124" width="374" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dpU-RP-d7f"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Pending"/>
+                                    <segment title="Completed"/>
+                                </segments>
+                                <connections>
+                                    <action selector="seg2Clciked:" destination="BYZ-38-t0r" eventType="valueChanged" id="p9f-YK-w7W"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oLk-Bw-toe">
+                                <rect key="frame" x="20" y="124" width="374" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H2c-wO-Vif"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Pending"/>
+                                    <segment title="Completed"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="seg3Clciked:" destination="BYZ-38-t0r" eventType="valueChanged" id="RML-ux-gTb"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6S-HX-afm">
+                                <rect key="frame" x="10" y="294" width="394" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="71c-S7-A4G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qfv-yg-4Nx">
+                                <rect key="frame" x="20" y="84" width="374" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CwD-xy-oy7"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Assigned to me"/>
+                                    <segment title="Created By Me"/>
+                                </segments>
+                                <connections>
+                                    <action selector="seg1Clicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="pwh-y1-jdH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oLk-Bw-toe" secondAttribute="trailing" constant="20" id="4pY-ct-t9L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qfv-yg-4Nx" secondAttribute="trailing" constant="20" id="AZO-h8-p7c"/>
+                            <constraint firstItem="J6S-HX-afm" firstAttribute="top" secondItem="oLk-Bw-toe" secondAttribute="bottom" constant="140" id="K8s-R6-ecb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J6S-HX-afm" secondAttribute="trailing" constant="10" id="Oxo-m0-jDz"/>
+                            <constraint firstItem="Qfv-yg-4Nx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Qlx-iB-RNS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X5x-YC-WKE" secondAttribute="trailing" constant="20" id="RNS-yH-Yz9"/>
+                            <constraint firstItem="J6S-HX-afm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="TEf-K1-e9F"/>
+                            <constraint firstItem="X5x-YC-WKE" firstAttribute="top" secondItem="Qfv-yg-4Nx" secondAttribute="bottom" constant="10" id="Xy8-gH-fSB"/>
+                            <constraint firstItem="oLk-Bw-toe" firstAttribute="top" secondItem="X5x-YC-WKE" secondAttribute="bottom" constant="-30" id="a6N-GR-7Fm"/>
+                            <constraint firstItem="Qfv-yg-4Nx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c9U-HY-gtt"/>
+                            <constraint firstItem="oLk-Bw-toe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dSc-dV-OW5"/>
+                            <constraint firstItem="X5x-YC-WKE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nEh-bw-yqf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLbl" destination="J6S-HX-afm" id="KCS-aw-3vj"/>
+                        <outlet property="seg1" destination="Qfv-yg-4Nx" id="9F4-V5-QV6"/>
+                        <outlet property="seg2" destination="X5x-YC-WKE" id="o8Z-j5-OyX"/>
+                        <outlet property="seg3" destination="oLk-Bw-toe" id="iSt-YH-nXw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
